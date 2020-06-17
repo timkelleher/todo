@@ -25,10 +25,10 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <form action="{{ route('tasks.destroy', $task->id) }}" method="post">
-                                    <a class="btn btn-primary" href="{{ route('tasks.edit', $task->id) }}">Update</a>
                                     @if ($task->isComplete())
                                         <a class="btn btn-secondary" href="{{ route('tasks.revert', $task->id) }}">Revert Status</a>
                                     @else
+                                        <a class="btn btn-primary" href="{{ route('tasks.edit', $task->id) }}">Update</a>
                                         <a class="btn btn-secondary" href="{{ route('tasks.complete', $task->id) }}">Complete</a>
                                     @endif
 
@@ -38,8 +38,6 @@
                                 </form>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
