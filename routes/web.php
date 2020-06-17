@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'TaskController@index')->name('home');
+Route::get('/tasks/{task}/complete', 'TaskController@complete')
+    ->name('tasks.complete');
+Route::get('/tasks/{task}/revert', 'TaskController@revert')
+    ->name('tasks.revert');
+Route::resource('tasks', 'TaskController');
+
