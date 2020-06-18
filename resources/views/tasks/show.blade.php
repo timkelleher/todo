@@ -9,8 +9,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-9">
-                                <h4>Description</h4>
-                                {{ $task->description ?? 'No description.' }}
+                                {!! $task->description ? Markdown::parse($task->description) : 'No description.' !!}
                                 <br />
                             </div>
                             <div class="col-md-3">
