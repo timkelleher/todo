@@ -39,7 +39,7 @@
                             </tbody>
                         </table>
                     @else
-                        Create some Tasks?
+                        You don't have any tasks.  Why don't you <a href="{{ route('tasks.create') }}">create</a> one?
                     @endif
                 </div>
             </div>
